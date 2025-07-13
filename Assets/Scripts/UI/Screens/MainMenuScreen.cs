@@ -8,17 +8,16 @@ public class MainMenuScreen : ScreenBase
     [SerializeField] private Button _openModalButton;
 
 
-
-    void Awake()
+    protected override void Awake()
     {
         _settingsButton.onClick.AddListener(() =>
         {
-            StackNavigator.Instance?.Navigate("SettingsScreen");
+            Navigation.Stack.Navigate("SettingsScreen");
         });
 
         _openModalButton?.onClick.AddListener(() =>
         {
-            ModalManager.Instance?.ShowModal("ConfirmModal");
+            Navigation.Modal?.ShowModal("ConfirmModal");
         });
     }
 }

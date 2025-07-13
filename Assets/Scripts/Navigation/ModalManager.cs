@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ModalManager : MonoBehaviour {
-    public static ModalManager Instance;
     
 
     [Header("Modals in Scene")]
@@ -15,7 +14,6 @@ public class ModalManager : MonoBehaviour {
     private Stack<ScreenBase> _modalStack = new();
 
     void Awake() {
-        Instance = this;
 
         _modals = new();
         foreach (var pair in modalsInScene) {

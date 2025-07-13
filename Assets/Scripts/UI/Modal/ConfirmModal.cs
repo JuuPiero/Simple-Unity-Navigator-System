@@ -9,11 +9,11 @@ public class ConfirmModal : ScreenBase
 
     // [SerializeField] private GameObject _overlay;
 
-    void Awake()
+    protected override void Awake()
     {
         yesButton?.onClick.AddListener(() =>
         {
-            ModalManager.Instance.CloseModal();
+            Navigation.Modal.CloseModal();
         });
 
     }

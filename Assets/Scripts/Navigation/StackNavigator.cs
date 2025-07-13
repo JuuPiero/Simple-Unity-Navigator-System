@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class StackNavigator : MonoBehaviour
 {
-    public static StackNavigator Instance;
 
 
     [Header("Screens")]
@@ -16,16 +15,12 @@ public class StackNavigator : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
         _screens = new();
         foreach (var pair in screensInScene)
         {
             _screens[pair.name] = pair.screen;
             // pair.screen.gameObject.SetActive(false); // Tắt tất cả lúc đầu
         }
-
-       
-
     }
     void Start()
     {

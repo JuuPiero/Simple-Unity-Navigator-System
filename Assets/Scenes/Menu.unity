@@ -612,6 +612,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd3aca4a9fb3e94b92e5e05e592fa66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _useTransition: 0
+  _transitionDuration: 0.3
   yesButton: {fileID: 290903445}
   noButton: {fileID: 620260198}
 --- !u!1 &449730643
@@ -1222,6 +1224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ba68d87667fb60419f7ce3ee9fe3d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _useTransition: 0
+  _transitionDuration: 0.3
   _backButton: {fileID: 1644848090}
 --- !u!1 &839898927
 GameObject:
@@ -1313,6 +1317,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dbd0f8aa3a2f974bbed43047bb84248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _useTransition: 0
+  _transitionDuration: 0.3
   _settingsButton: {fileID: 1399778902}
   _openModalButton: {fileID: 687000739}
 --- !u!1 &870445456
@@ -1957,6 +1963,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1242723119}
+  - component: {fileID: 1242723120}
   m_Layer: 0
   m_Name: AppContext
   m_TagString: Untagged
@@ -1981,6 +1988,21 @@ Transform:
   - {fileID: 1816981366}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1242723120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242723118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a33c4712a92cdb542bf1235e250b8c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stack: {fileID: 449730645}
+  _tab: {fileID: 0}
+  _modal: {fileID: 1816981367}
 --- !u!1 &1346449940
 GameObject:
   m_ObjectHideFlags: 0

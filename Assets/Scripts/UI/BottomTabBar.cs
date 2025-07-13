@@ -6,8 +6,8 @@ public class BottomTabBar : MonoBehaviour {
     [SerializeField] private Button _settingsButton;
 
     void Awake() {
-        _homeButton.onClick.AddListener(() => TabNavigator.Instance.SwitchTab("HomeTab"));
-        _profileButton.onClick.AddListener(() => TabNavigator.Instance.SwitchTab("ProfileTab"));
-        _settingsButton.onClick.AddListener(() => TabNavigator.Instance.SwitchTab("SettingsTab"));
+        _homeButton.onClick.AddListener(() => Navigation.Tab.SwitchTab("HomeTab"));
+        _profileButton.onClick.AddListener(() => Navigation.Tab.SwitchTab("ProfileTab"));
+        _settingsButton.onClick.AddListener(() => Navigation.Tab.SwitchTab("SettingsTab"));
     }
 }

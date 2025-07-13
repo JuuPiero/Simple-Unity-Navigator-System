@@ -2,8 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TabNavigator : MonoBehaviour {
-    public static TabNavigator Instance;
-    
 
     [Header("Tab Screens")]
     public List<NamedView> tabsInScene;
@@ -12,7 +10,6 @@ public class TabNavigator : MonoBehaviour {
     [SerializeField] private string _currentTab = null;
 
     void Awake() {
-        Instance = this;
 
         _tabs = new();
         foreach (var tab in tabsInScene) {
@@ -36,7 +33,7 @@ public class TabNavigator : MonoBehaviour {
         // Ẩn tab hiện tại
         if (!string.IsNullOrEmpty(_currentTab))
         {
-            print(_currentTab);
+            // print(_currentTab);
             _tabs[_currentTab].OnExit();
         }
 
